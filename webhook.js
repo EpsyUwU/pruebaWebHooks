@@ -1,9 +1,8 @@
 const http = require('http');
 const createHandler = require('github-webhook-handler');
 
-const handler = createHandler({ path: '/webhook', secret: 'esteban' });
-console.log("ya ta jalando en el puerto 3000")
-
+const handler = createHandler({ path: '/webhook', secret: 'pepe' });
+console.log("ta calando");
 http.createServer((req, res) => {
   handler(req, res, err => {
     res.statusCode = 404;
